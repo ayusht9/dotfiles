@@ -6,7 +6,17 @@ ZSH_THEME=""
 
 ENABLE_CORRECTION="true"
 
-PS1="%n@%m %~ %# "
+# prompt
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:git:*' formats '(%b)'
+precmd() { vcs_info }
+
+BOLD='%B'
+RESET='%b'
+
+PROMPT="${BOLD}%n@%m %~${vcs_info_msg_0_}%# ${RESET}"
+RPROMPT='%D{%Y-%m-%d %I:%M:%S %p}'
 
 setopt autocd
 setopt appendhistory
