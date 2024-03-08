@@ -30,5 +30,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # aliases
-alias icat="kitten icat"
+alias icat="kitty +kitten icat"
+alias sup="sudo apt update && sudo apt upgrade -y" 
+
 source $ZSH/oh-my-zsh.sh
