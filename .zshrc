@@ -29,4 +29,6 @@ HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
 
+# aliases
+alias icat="kitten icat"
 source $ZSH/oh-my-zsh.sh
