@@ -31,6 +31,18 @@ SAVEHIST=10000
 
 # aliases
 alias icat="kitty +kitten icat"
-alias sup="sudo apt update && sudo apt upgrade -y" 
+alias lsh="ls -lhtr"
+
+# theme switcher
+# dark
+alias dark='gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark \
+&& gsettings set org.gnome.desktop.interface color-scheme prefer-dark'
+
+# light
+alias light='gsettings set org.gnome.desktop.interface gtk-theme Adwaita \
+&& gsettings set org.gnome.desktop.interface color-scheme prefer-light'
 
 source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
